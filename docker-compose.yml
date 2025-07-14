@@ -7,12 +7,18 @@ services:
     ports:
       - 5678:5678
     environment:
-      - DB_TYPE=sqlite
-      - DB_SQLITE_PATH=/data/database.sqlite
+      - DB_TYPE=postgresdb
+      - DB_POSTGRESDB_HOST=aws-0-ap-southeast-1.pooler.supabase.com
+      - DB_POSTGRESDB_PORT=6543
+      - DB_POSTGRESDB_DATABASE=postgres
+      - DB_POSTGRESDB_USER=postgres.youiswajtnmfqbwipgfu
+      - DB_POSTGRESDB_PASSWORD=1sampai6
+      - DB_POSTGRESDB_SCHEMA=public
+      - DB_POSTGRESDB_SSL_REJECT_UNAUTHORIZED=false
       - N8N_BASIC_AUTH_ACTIVE=true
       - N8N_BASIC_AUTH_USER=admin
       - N8N_BASIC_AUTH_PASSWORD=admin
       - NODE_OPTIONS=--max-old-space-size=512
+      - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
     volumes:
       - ./n8n_data:/home/node/.n8n
-      - ./n8n_data:/data
