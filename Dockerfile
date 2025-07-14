@@ -9,5 +9,5 @@ ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 # Expose the port explicitly
 EXPOSE 5678
 
-# Use the full path to n8n executable
-CMD ["/usr/local/bin/n8n"]
+# Use npm to run n8n (this is how the official image works)
+CMD ["npm", "start"]
