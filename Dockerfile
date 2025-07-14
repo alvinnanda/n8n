@@ -1,4 +1,4 @@
-FROM n8nio/n8n:latest
+FROM n8nio/n8n:0.230.0
 
 # Use a volume for persistent data
 VOLUME /home/node/.n8n
