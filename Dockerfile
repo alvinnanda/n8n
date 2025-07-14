@@ -3,5 +3,8 @@ FROM n8nio/n8n:latest
 # Use a volume for persistent data
 VOLUME /home/node/.n8n
 
+# Set environment variable to enforce correct permissions
+ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
+
 # Start n8n
 CMD ["n8n"]
