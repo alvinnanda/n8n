@@ -9,5 +9,4 @@ ENV N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
 # Expose the port explicitly
 EXPOSE 5678
 
-# Use npm to run n8n (this is how the official image works)
-CMD ["npm", "start"]
+# Let the base image handle the startup command
